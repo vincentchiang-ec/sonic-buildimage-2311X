@@ -158,7 +158,7 @@
         ],
         "thermals": [
             {
-                "name": "Temp sensor 1",
+                "name": "SMB_RearMiddle_temp(0x48)",
                 "controllable": true,
                 "low-threshold": false,
                 "high-threshold": true,
@@ -166,7 +166,7 @@
                 "high-crit-threshold": true
             },
             {
-                "name": "Temp sensor 2",
+                "name": "SMB_FrontMiddle_temp(0x49)",
                 "controllable": true,
                 "low-threshold": false,
                 "high-threshold": true,
@@ -174,7 +174,7 @@
                 "high-crit-threshold": true
             },
             {
-                "name": "Temp sensor 3",
+                "name": "SMB_LeftMiddle_temp(0x4C)",
                 "controllable": true,
                 "low-threshold": false,
                 "high-threshold": true,
@@ -182,7 +182,7 @@
                 "high-crit-threshold": true
             },
             {
-                "name": "Temp sensor 4",
+                "name": "FCM_Center_temp(0x48)",
                 "controllable": true,
                 "low-threshold": false,
                 "high-threshold": true,
@@ -190,7 +190,7 @@
                 "high-crit-threshold": true
             },
             {
-                "name": "Temp sensor 5",
+                "name": "FCM_Left_temp(0x49)",
                 "controllable": true,
                 "low-threshold": false,
                 "high-threshold": true,
@@ -198,7 +198,7 @@
                 "high-crit-threshold": true
             },
             {
-                "name": "Temp sensor 6",
+                "name": "PDB-L_temp(0x48)",
                 "controllable": true,
                 "low-threshold": false,
                 "high-threshold": true,
@@ -206,7 +206,7 @@
                 "high-crit-threshold": true
             },
             {
-                "name": "Temp sensor 7",
+                "name": "PDB-R_temp(0x49)",
                 "controllable": true,
                 "low-threshold": false,
                 "high-threshold": true,
@@ -214,7 +214,7 @@
                 "high-crit-threshold": true
             },
             {
-                "name": "Temp sensor 8",
+                "name": "UDB_RearLeft_temp(0x48)",
                 "controllable": true,
                 "low-threshold": false,
                 "high-threshold": true,
@@ -222,7 +222,7 @@
                 "high-crit-threshold": true
             },
             {
-                "name": "Temp sensor 9",
+                "name": "UDB_RearMiddle_temp(0x4C)",
                 "controllable": true,
                 "low-threshold": false,
                 "high-threshold": true,
@@ -230,7 +230,7 @@
                 "high-crit-threshold": true
             },
             {
-                "name": "Temp sensor 10",
+                "name": "LDB_FrontRight_temp(0x4C)",
                 "controllable": true,
                 "low-threshold": false,
                 "high-threshold": true,
@@ -238,7 +238,7 @@
                 "high-crit-threshold": true
             },
             {
-                "name": "Temp sensor 11",
+                "name": "LDB_RearRight_temp(0x4D)",
                 "controllable": true,
                 "low-threshold": false,
                 "high-threshold": true,
@@ -246,7 +246,7 @@
                 "high-crit-threshold": true
             },
             {
-                "name": "CPU Package Temp",
+                "name": "CPU_Package_temp",
                 "controllable": true,
                 "low-threshold": false,
                 "high-threshold": true,
@@ -254,7 +254,7 @@
                 "high-crit-threshold": true
             },
             {
-                "name": "CPU Core 0 Temp",
+                "name": "CPU_Core_0_temp",
                 "controllable": true,
                 "low-threshold": false,
                 "high-threshold": true,
@@ -262,7 +262,7 @@
                 "high-crit-threshold": true
             },
             {
-                "name": "CPU Core 1 Temp",
+                "name": "CPU_Core_1_temp",
                 "controllable": true,
                 "low-threshold": false,
                 "high-threshold": true,
@@ -270,7 +270,7 @@
                 "high-crit-threshold": true
             },
             {
-                "name": "CPU Core 2 Temp",
+                "name": "CPU_Core_2_temp",
                 "controllable": true,
                 "low-threshold": false,
                 "high-threshold": true,
@@ -278,7 +278,7 @@
                 "high-crit-threshold": true
             },
             {
-                "name": "CPU Core 3 Temp",
+                "name": "CPU_Core_3_temp",
                 "controllable": true,
                 "low-threshold": false,
                 "high-threshold": true,
@@ -286,7 +286,7 @@
                 "high-crit-threshold": true
             },
             {
-                "name": "CPU Core 4 Temp",
+                "name": "CPU_Core_4_temp",
                 "controllable": true,
                 "low-threshold": false,
                 "high-threshold": true,
@@ -294,7 +294,7 @@
                 "high-crit-threshold": true
             },
             {
-                "name": "CPU Core 5 Temp",
+                "name": "CPU_Core_5_temp",
                 "controllable": true,
                 "low-threshold": false,
                 "high-threshold": true,
@@ -302,7 +302,7 @@
                 "high-crit-threshold": true
             },
             {
-                "name": "CPU Core 6 Temp",
+                "name": "CPU_Core_6_temp",
                 "controllable": true,
                 "low-threshold": false,
                 "high-threshold": true,
@@ -310,7 +310,7 @@
                 "high-crit-threshold": true
             },
             {
-                "name": "CPU Core 7 Temp",
+                "name": "CPU_Core_7_temp",
                 "controllable": true,
                 "low-threshold": false,
                 "high-threshold": true,
@@ -571,7 +571,7 @@
                 "4x25G[10G]": ["Eth4/1(Port4)", "Eth4/2(Port4)", "Eth4/3(Port4)", "Eth4/4(Port4)"]
             }
         },
-        
+
         "Ethernet16": {
             "index": "5,5,5,5",
             "lanes": "81,82,83,84",
@@ -584,7 +584,7 @@
                 "4x25G[10G]": ["Eth5/1(Port5)", "Eth5/2(Port5)", "Eth5/3(Port5)", "Eth5/4(Port5)"]
             }
         },
-        
+
         "Ethernet20": {
             "index": "6,6,6,6",
             "lanes": "85,86,87,88",
@@ -610,7 +610,7 @@
                 "4x25G[10G]": ["Eth7/1(Port7)", "Eth7/2(Port7)", "Eth7/3(Port7)", "Eth7/4(Port7)"]
             }
         },
-        
+
         "Ethernet28": {
             "index": "8,8,8,8",
             "lanes": "93,94,95,96",
@@ -636,7 +636,7 @@
                 "4x25G[10G]": ["Eth9/1(Port9)", "Eth9/2(Port9)", "Eth9/3(Port9)", "Eth9/4(Port9)"]
             }
         },
-        
+
         "Ethernet36": {
             "index": "10,10,10,10",
             "lanes": "101,102,103,104",
@@ -662,7 +662,7 @@
                 "4x25G[10G]": ["Eth11/1(Port11)", "Eth11/2(Port11)", "Eth11/3(Port11)", "Eth11/4(Port11)"]
             }
         },
-        
+
         "Ethernet44": {
             "index": "12,12,12,12",
             "lanes": "121,122,123,124",
@@ -688,7 +688,7 @@
                 "4x25G[10G]": ["Eth13/1(Port13)", "Eth13/2(Port13)", "Eth13/3(Port13)", "Eth13/4(Port13)"]
             }
         },
-        
+
         "Ethernet52": {
             "index": "14,14,14,14",
             "lanes": "117,118,119,120",
@@ -714,7 +714,7 @@
                 "4x25G[10G]": ["Eth15/1(Port15)", "Eth15/2(Port15)", "Eth15/3(Port15)", "Eth15/4(Port15)"]
             }
         },
-        
+
         "Ethernet60": {
             "index": "16,16,16,16",
             "lanes": "105,106,107,108",
@@ -740,7 +740,7 @@
                 "4x25G[10G]": ["Eth17/1(Port17)", "Eth17/2(Port17)", "Eth17/3(Port17)", "Eth17/4(Port17)"]
             }
         },
-        
+
         "Ethernet68": {
             "index": "18,18,18,18",
             "lanes": "149,150,151,152",
@@ -766,7 +766,7 @@
                 "4x25G[10G]": ["Eth19/1(Port19)", "Eth19/2(Port19)", "Eth19/3(Port19)", "Eth19/4(Port19)"]
             }
         },
-        
+
         "Ethernet76": {
             "index": "20,20,20,20",
             "lanes": "137,138,139,140",
@@ -792,7 +792,7 @@
                 "4x25G[10G]": ["Eth21/1(Port21)", "Eth21/2(Port21)", "Eth21/3(Port21)", "Eth21/4(Port21)"]
             }
         },
-        
+
         "Ethernet84": {
             "index": "22,22,22,22",
             "lanes": "133,134,135,136",
@@ -818,7 +818,7 @@
                 "4x25G[10G]": ["Eth23/1(Port23)", "Eth23/2(Port23)", "Eth23/3(Port23)", "Eth23/4(Port23)"]
             }
         },
-        
+
         "Ethernet92": {
             "index": "24,24,24,24",
             "lanes": "157,158,159,160",
@@ -844,7 +844,7 @@
                 "4x25G[10G]": ["Eth25/1(Port25)", "Eth25/2(Port25)", "Eth25/3(Port25)", "Eth25/4(Port25)"]
             }
         },
-        
+
         "Ethernet100": {
             "index": "26,26,26,26",
             "lanes": "165,166,167,168",
@@ -870,7 +870,7 @@
                 "4x25G[10G]": ["Eth27/1(Port27)", "Eth27/2(Port27)", "Eth27/3(Port27)", "Eth27/4(Port27)"]
             }
         },
-        
+
         "Ethernet108": {
             "index": "28,28,28,28",
             "lanes": "173,174,175,176",
@@ -896,7 +896,7 @@
                 "4x25G[10G]": ["Eth29/1(Port29)", "Eth29/2(Port29)", "Eth29/3(Port29)", "Eth29/4(Port29)"]
             }
         },
-        
+
         "Ethernet116": {
             "index": "30,30,30,30",
             "lanes": "181,182,183,184",
@@ -922,7 +922,7 @@
                 "4x25G[10G]": ["Eth31/1(Port31)", "Eth31/2(Port31)", "Eth31/3(Port31)", "Eth31/4(Port31)"]
             }
         },
-        
+
         "Ethernet124": {
             "index": "32,32,32,32",
             "lanes": "189,190,191,192",
@@ -949,7 +949,7 @@
                 "4x25G[10G]": ["Eth33/1(Port33)", "Eth33/2(Port33)", "Eth33/3(Port33)", "Eth33/4(Port33)"]
             }
         },
-        
+
         "Ethernet132": {
             "index": "34,34,34,34",
             "lanes": "53,54,55,56",
@@ -975,7 +975,7 @@
                 "4x25G[10G]": ["Eth35/1(Port35)", "Eth35/2(Port35)", "Eth35/3(Port35)", "Eth35/4(Port35)"]
             }
         },
-        
+
         "Ethernet140": {
             "index": "36,36,36,36",
             "lanes": "61,62,63,64",
@@ -1001,7 +1001,7 @@
                 "4x25G[10G]": ["Eth37/1(Port37)", "Eth37/2(Port37)", "Eth37/3(Port37)", "Eth37/4(Port37)"]
             }
         },
-        
+
         "Ethernet148": {
             "index": "38,38,38,38",
             "lanes": "33,34,35,36",
@@ -1027,7 +1027,7 @@
                 "4x25G[10G]": ["Eth39/1(Port39)", "Eth39/2(Port39)", "Eth39/3(Port39)", "Eth39/4(Port39)"]
             }
         },
-        
+
         "Ethernet156": {
             "index": "40,40,40,40",
             "lanes": "41,42,43,44",
@@ -1053,7 +1053,7 @@
                 "4x25G[10G]": ["Eth41/1(Port41)", "Eth41/2(Port41)", "Eth41/3(Port41)", "Eth41/4(Port41)"]
             }
         },
-        
+
         "Ethernet164": {
             "index": "42,42,42,42",
             "lanes": "37,38,39,40",
@@ -1079,7 +1079,7 @@
                 "4x25G[10G]": ["Eth43/1(Port43)", "Eth43/2(Port43)", "Eth43/3(Port43)", "Eth43/4(Port43)"]
             }
         },
-        
+
         "Ethernet172": {
             "index": "44,44,44,44",
             "lanes": "45,46,47,48",
@@ -1105,7 +1105,7 @@
                 "4x25G[10G]": ["Eth45/1(Port45)", "Eth45/2(Port45)", "Eth45/3(Port45)", "Eth45/4(Port45)"]
             }
         },
-        
+
         "Ethernet180": {
             "index": "46,46,46,46",
             "lanes": "9,10,11,12",
@@ -1131,7 +1131,7 @@
                 "4x25G[10G]": ["Eth47/1(Port47)", "Eth47/2(Port47)", "Eth47/3(Port47)", "Eth47/4(Port47)"]
             }
         },
-        
+
         "Ethernet188": {
             "index": "48,48,48,48",
             "lanes": "5,6,7,8",
@@ -1157,7 +1157,7 @@
                 "4x25G[10G]": ["Eth49/1(Port49)", "Eth49/2(Port49)", "Eth49/3(Port49)", "Eth49/4(Port49)"]
             }
         },
-        
+
         "Ethernet196": {
             "index": "50,50,50,50",
             "lanes": "253,254,255,256",
@@ -1183,7 +1183,7 @@
                 "4x25G[10G]": ["Eth51/1(Port51)", "Eth51/2(Port51)", "Eth51/3(Port51)", "Eth51/4(Port51)"]
             }
         },
-        
+
         "Ethernet204": {
             "index": "52,52,52,52",
             "lanes": "241,242,243,244",
@@ -1209,7 +1209,7 @@
                 "4x25G[10G]": ["Eth53/1(Port53)", "Eth53/2(Port53)", "Eth53/3(Port53)", "Eth53/4(Port53)"]
             }
         },
-        
+
         "Ethernet212": {
             "index": "54,54,54,54",
             "lanes": "209,210,211,212",
@@ -1231,11 +1231,10 @@
                 "2x200G": ["Eth55/1(Port55)", "Eth55/2(Port55)"],
                 "4x100G": ["Eth55/1(Port55)", "Eth55/2(Port55)", "Eth55/3(Port55)", "Eth55/4(Port55)"],
                 "1x100G[40G](2)": ["Eth55(Port55)"],
-                "2x50G(2)": ["Eth55/1(Port55)", "Eth55/2(Port55)"],
                 "4x25G[10G]": ["Eth55/1(Port55)", "Eth55/2(Port55)", "Eth55/3(Port55)", "Eth55/4(Port55)"]
             }
         },
-        
+
         "Ethernet220": {
             "index": "56,56,56,56",
             "lanes": "217,218,219,220",
@@ -1261,7 +1260,7 @@
                 "4x25G[10G]": ["Eth57/1(Port57)", "Eth57/2(Port57)", "Eth57/3(Port57)", "Eth57/4(Port57)"]
             }
         },
-        
+
         "Ethernet228": {
             "index": "58,58,58,58",
             "lanes": "213,214,215,216",
@@ -1287,7 +1286,7 @@
                 "4x25G[10G]": ["Eth59/1(Port59)", "Eth59/2(Port59)", "Eth59/3(Port59)", "Eth59/4(Port59)"]
             }
         },
-        
+
         "Ethernet236": {
             "index": "60,60,60,60",
             "lanes": "221,222,223,224",
@@ -1313,7 +1312,7 @@
                 "4x25G[10G]": ["Eth61/1(Port61)", "Eth61/2(Port61)", "Eth61/3(Port61)", "Eth61/4(Port61)"]
             }
         },
-        
+
         "Ethernet244": {
             "index": "62,62,62,62",
             "lanes": "201,202,203,204",
@@ -1339,7 +1338,7 @@
                 "4x25G[10G]": ["Eth63/1(Port63)", "Eth63/2(Port63)", "Eth63/3(Port63)", "Eth63/4(Port63)"]
             }
         },
-        
+
         "Ethernet252": {
             "index": "64,64,64,64",
             "lanes": "205,206,207,208",
@@ -1352,7 +1351,7 @@
                 "4x25G[10G]": ["Eth64/1(Port64)", "Eth64/2(Port64)", "Eth64/3(Port64)", "Eth64/4(Port64)"]
             }
         },
-        
+
         "Ethernet256": {
             "index": "65",
             "lanes": "257",
@@ -1370,4 +1369,3 @@
         }
     }
 }
-
