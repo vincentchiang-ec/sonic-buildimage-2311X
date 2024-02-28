@@ -12,6 +12,7 @@ $(addprefix $(DEST)/, $(MAIN_TARGET)): $(DEST)/% :
 	wget -NO socat_$(SOCAT_VERSION).dsc "https://sonicstorage.blob.core.windows.net/public/debian/socat_1.7.4.1-3.dsc"
 	wget -NO socat_$(SOCAT_VERSION).debian.tar.xz "https://sonicstorage.blob.core.windows.net/public/debian/socat_1.7.4.1-3.debian.tar.xz"
 	wget -NO socat_1.7.4.1.orig.tar.gz "https://sonicstorage.blob.core.windows.net/public/debian/socat_1.7.4.1.orig.tar.gz"
+
 	dpkg-source -x socat_$(SOCAT_VERSION).dsc
 
 	# Build source and Debian packages
@@ -28,4 +29,3 @@ endif
 	mv $(DERIVED_TARGETS) $* $(DEST)/
 
 $(addprefix $(DEST)/, $(DERIVED_TARGETS)): $(DEST)/% : $(DEST)/$(MAIN_TARGET)
-
