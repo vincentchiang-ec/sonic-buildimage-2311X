@@ -10,14 +10,15 @@ DERIVED_TARGETS = libthrift-dev_$(THRIFT_VERSION_FULL)_$(CONFIGURED_ARCH).deb \
 		  python-thrift_$(THRIFT_VERSION_FULL)_$(CONFIGURED_ARCH).deb \
 		  thrift-compiler_$(THRIFT_VERSION_FULL)_$(CONFIGURED_ARCH).deb
 
-THRIFT_LINK_PRE = https://sonicstorage.blob.core.windows.net/packages/debian
+THRIFT_LINK_PRE = https://sonicstorage.blob.core.windows.net/public/debian
 
 $(addprefix $(DEST)/, $(MAIN_TARGET)): $(DEST)/% :
 	rm -rf thrift-$(THRIFT_VERSION)
 
-	wget -O swig_$(SWIG_VERSION)-$(SWIG_SUBVERSION).debian.tar.xz 'https://sonicstorage.blob.core.windows.net/public/swig_3.0.12-2.debian.tar.xz'
+	wget -NO "thrift_$(THRIFT_VERSION).orig.tar.gz" "$(THRIFT_LINK_PRE)/thrift_0.11.0.orig.tar.gz"
 	wget -NO "thrift_$(THRIFT_VERSION_FULL).debian.tar.xz" "$(THRIFT_LINK_PRE)/thrift_0.11.0-4.debian.tar.xz"
 	wget -NO "thrift_$(THRIFT_VERSION_FULL).dsc" "$(THRIFT_LINK_PRE)/thrift_0.11.0-4.dsc"
+
 	dpkg-source -x thrift_$(THRIFT_VERSION_FULL).dsc
 	pushd thrift-$(THRIFT_VERSION)
 
