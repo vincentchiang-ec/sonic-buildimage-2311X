@@ -28,6 +28,17 @@ stdout_logfile=syslog
 stderr_logfile=syslog
 dependent_startup=true
 
+[program:start]
+command=/usr/bin/start.sh
+priority=2
+autostart=false
+autorestart=false
+stdout_logfile=syslog
+stderr_logfile=syslog
+startsecs=0
+dependent_startup=true
+dependent_startup_wait_for=rsyslogd:running
+
 {% if not skip_chassisd and IS_MODULAR_CHASSIS == 1 %}
 [program:chassisd]
 command=/usr/local/bin/chassisd
@@ -38,7 +49,7 @@ stdout_logfile=syslog
 stderr_logfile=syslog
 startsecs=10
 dependent_startup=true
-dependent_startup_wait_for=rsyslogd:running
+dependent_startup_wait_for=start:exited
 {% endif %}
 
 {% if not skip_chassis_db_init %}
@@ -51,7 +62,7 @@ stdout_logfile=syslog
 stderr_logfile=syslog
 startsecs=0
 dependent_startup=true
-dependent_startup_wait_for=rsyslogd:running
+dependent_startup_wait_for=start:exited
 {% endif %}
 
 {% if not skip_sensors and HAVE_SENSORS_CONF == 1 %}
@@ -64,7 +75,7 @@ stdout_logfile=syslog
 stderr_logfile=syslog
 startsecs=0
 dependent_startup=true
-dependent_startup_wait_for=rsyslogd:running
+dependent_startup_wait_for=start:exited
 {% endif %}
 
 {% if not skip_fancontrol and HAVE_FANCONTROL_CONF == 1 %}
@@ -77,12 +88,12 @@ stdout_logfile=syslog
 stderr_logfile=syslog
 startsecs=10
 dependent_startup=true
-dependent_startup_wait_for=rsyslogd:running
+dependent_startup_wait_for=start:exited
 {% endif %}
 
 {% if not skip_ledd %}
 [program:ledd]
-command={% if API_VERSION == 3 and 'ledd' not in python2_daemons %}python3 {% else %} python2 {% endif %}/usr/local/bin/ledd
+command=python3 /usr/local/bin/ledd
 priority=5
 autostart=false
 autorestart=unexpected
@@ -90,7 +101,7 @@ stdout_logfile=syslog
 stderr_logfile=syslog
 startsecs=10
 dependent_startup=true
-dependent_startup_wait_for=rsyslogd:running
+dependent_startup_wait_for=start:exited
 {% endif %}
 
 {% if not skip_xcvrd %}
@@ -109,7 +120,7 @@ stdout_logfile=syslog
 stderr_logfile=syslog
 startsecs=10
 dependent_startup=true
-dependent_startup_wait_for=rsyslogd:running
+dependent_startup_wait_for=start:exited
 {% endif %}
 
 {% if DEVICE_METADATA and 'subtype' in DEVICE_METADATA['localhost'] and DEVICE_METADATA['localhost']['subtype'] == 'DualToR' %}
@@ -127,13 +138,13 @@ stdout_logfile=syslog
 stderr_logfile=syslog
 startsecs=10
 dependent_startup=true
-dependent_startup_wait_for=rsyslogd:running
+dependent_startup_wait_for=start:exited
 {% endif %}
 {% endif %}
 
 {% if not skip_psud %}
 [program:psud]
-command={% if API_VERSION == 3 and 'psud' not in python2_daemons %}python3 {% else %} python2 {% endif %}/usr/local/bin/psud
+command=python3 /usr/local/bin/psud
 priority=8
 autostart=false
 autorestart=unexpected
@@ -141,12 +152,12 @@ stdout_logfile=syslog
 stderr_logfile=syslog
 startsecs=10
 dependent_startup=true
-dependent_startup_wait_for=rsyslogd:running
+dependent_startup_wait_for=start:exited
 {% endif %}
 
 {% if not skip_syseepromd %}
 [program:syseepromd]
-command={% if API_VERSION == 3 and 'syseepromd' not in python2_daemons %}python3 {% else %} python2 {% endif %}/usr/local/bin/syseepromd
+command=python3 /usr/local/bin/syseepromd
 priority=9
 autostart=false
 autorestart=unexpected
@@ -154,12 +165,12 @@ stdout_logfile=syslog
 stderr_logfile=syslog
 startsecs=10
 dependent_startup=true
-dependent_startup_wait_for=rsyslogd:running
+dependent_startup_wait_for=start:exited
 {% endif %}
 
 {% if not skip_thermalctld %}
 [program:thermalctld]
-command={% if API_VERSION == 3 and 'thermalctld' not in python2_daemons %}python3 {% else %} python2 {% endif %}/usr/local/bin/thermalctld
+command=python3 /usr/local/bin/thermalctld
 priority=10
 autostart=false
 autorestart=unexpected
@@ -168,7 +179,7 @@ stderr_logfile=syslog
 startsecs=10
 startretries=50
 dependent_startup=true
-dependent_startup_wait_for=rsyslogd:running
+dependent_startup_wait_for=start:exited
 {% endif %}
 
 {% if not skip_pcied %}
@@ -181,5 +192,5 @@ stdout_logfile=syslog
 stderr_logfile=syslog
 startsecs=10
 dependent_startup=true
-dependent_startup_wait_for=rsyslogd:running
+dependent_startup_wait_for=start:exited
 {% endif %}
