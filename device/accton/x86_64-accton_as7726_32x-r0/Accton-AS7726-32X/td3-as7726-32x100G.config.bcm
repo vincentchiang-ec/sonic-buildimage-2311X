@@ -35,6 +35,7 @@ skip_L2_USER_ENTRY=0
 bcm_tunnel_term_compatible_mode=1
 l3_alpm_ipv6_128b_bkt_rsvd=1
 phy_an_c73=1
+l3_ecmp_levels=2
 
 use_all_splithorizon_groups=1
 riot_enable=1
