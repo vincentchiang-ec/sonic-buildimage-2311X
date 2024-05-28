@@ -282,11 +282,11 @@ class Thermal(ThermalBase):
             A float number, the high threshold temperature of thermal in Celsius
             up to nearest thousandth of one degree Celsius, e.g. 30.125
         """
-        value = self.conf.get_high_critical_threshold()
+        value = self.conf.get_high_threshold()
         if value != self.conf.NOT_AVAILABLE:
             return float(value)
 
-        default_value = self.default_threshold[self.get_name()][self.conf.HIGH_CRIT_THRESHOLD_FIELD]
+        default_value = self.default_threshold[self.get_name()][self.conf.HIGH_THRESHOLD_FIELD]
         if default_value != self.conf.NOT_AVAILABLE:
             return float(default_value)
 
@@ -307,7 +307,7 @@ class Thermal(ThermalBase):
             return False
 
         try:
-            self.conf.set_high_critical_threshold(str(value))
+            self.conf.set_high_threshold(str(value))
         except:
             return False
 
