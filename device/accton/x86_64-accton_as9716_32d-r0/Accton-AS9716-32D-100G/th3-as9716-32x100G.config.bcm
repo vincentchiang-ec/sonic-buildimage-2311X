@@ -40,6 +40,11 @@ sram_scan_enable.0=0
 tdma_timeout_usec.0=15000000
 tslam_timeout_usec.0=15000000
 
+# Broadcom community sai
+bcm_tunnel_term_compatible_mode.0=1
+sai_tunnel_support=2
+sai_tunnel_global_sip_mask_enable=1
+
 #firmware load method, use fast load
 load_firmware=0x2
 
