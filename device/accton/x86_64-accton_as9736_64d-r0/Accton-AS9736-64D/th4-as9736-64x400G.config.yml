@@ -12,7 +12,7 @@ bcm_device:
   0:
     global:
       pktio_mode: 1
-      rx_cosq_mapping_management_mode: 1
+      rx_cosq_mapping_management_mode: 0
       vlan_default_port: 3
       l3_alpm_template: 1
       port_allow_tpid_disable: 1
@@ -20,6 +20,7 @@ bcm_device:
       riot_overlay_l3_egress_mem_size: 8192
       l3_ecmp_member_first_lkup_mem_size: 8192
       l3_intf_vlan_split_egress: 1
+      bcm_tunnel_term_compatible_mode: 1
 ...
 ---
 bcm_device:
@@ -91,8 +92,6 @@ bcm_device:
       212: { dport_map_port: 62 }
       208: { dport_map_port: 63 }
       216: { dport_map_port: 64 }
-      152: { dport_map_port: 65 }
-      50: { dport_map_port: 66 }
 ...
 ---
 device:
@@ -1131,26 +1130,11 @@ device:
         PORT_ID: 267
       :
         PC_PHYS_PORT_ID: 253
-      ?
-        PORT_ID: 50
-      :
-        PC_PHYS_PORT_ID: 258
-      ?
-        PORT_ID: 152
-      :
-        PC_PHYS_PORT_ID: 257
 ...
 ---
 device:
   0:
     PC_PORT:
-      ?
-        PORT_ID: [50, 152]
-      :
-        ENABLE: 0
-        SPEED: 10000
-        NUM_LANES: 1
-        FEC_MODE: PC_FEC_NONE
       ?
         PORT_ID: 0
       :
@@ -1165,6 +1149,7 @@ device:
         SPEED: 400000
         NUM_LANES: 8
         FEC_MODE: PC_FEC_RS544_2XN
+        MAX_FRAME_SIZE: 9416
 
     PC_PMD_FIRMWARE:
       ?
