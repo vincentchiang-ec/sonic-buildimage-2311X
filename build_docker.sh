@@ -10,7 +10,7 @@ usage() {
     cat >&2 <<EOF
 Usage:
   sudo ./build_docker.sh [-i DOCKER_IMAGE_NAME] [-t DOCKER_IMAGE_TAG] DOCKER_BUILD_DIR [REGISTRY_SERVER REGISTRY_PORT REGISTRY_USERNAME REGISTRY_PASSWD]
-  
+ 
 Description:
   -i DOCKER_IMAGE_NAME
        Specify the docker image's name, by default it is DOCKER_BUILD_DIR
@@ -22,7 +22,7 @@ Description:
        The server name of the docker registry
   REGISTRY_PORT
        The port of the docker registry
-       
+
 Example:
   ./build_docker.sh -i docker-orchagent-mlnx docker-orchagent
 EOF
@@ -30,6 +30,7 @@ EOF
 
 docker_image_name=''
 docker_image_tag=latest
+retry_times=3
 ## The option-string tells getopts which options to expect and which of them must have an argument
 ## When you want getopts to expect an argument for an option, just place a : (colon) after the proper option flag
 ## If the very first character of the option-string is a :, getopts switches to "silent error reporting mode".
@@ -78,9 +79,41 @@ cp -r files $DOCKER_BUILD_DIR/files
 docker_try_rmi $docker_image_name
 
 ## Build the docker image
-docker build --no-cache -t $docker_image_name $DOCKER_BUILD_DIR
+set +e
+for (( i=$retry_times; i>0; i-- )); do
+    timeout 1h docker build --no-cache -t $docker_image_name $DOCKER_BUILD_DIR
+    ret_code=$?
+    case $ret_code in
+        # Docker build without error.
+        "0")
+            break
+            ;;
+        # Docker build timeout
+        "124")
+            docker_try_rmi $docker_image_name  # Remove the exist image
+            if [[ $i -eq 1 ]]; then
+                echo "Failed to build container [$docker_image_name] in $retry_times times, exit. "
+                rm -rf $DOCKER_BUILD_DIR
+                exit $ret_code
+            else
+                echo "Failed to build container [$docker_image_name], retry. "
+            fi
+            ;;
+        # Command "Timeout" return error.
+        "125"|"126"|"127"|"137")
+            echo "Error with command \"timeout\", exit. "
+            break
+            ;;
+        # Docker build got error
+        *)
+            rm -rf $DOCKER_BUILD_DIR # Replace the trap_up function
+            exit $ret_code ;;
+    esac
+done
+
 ## Get the ID of the built image
 ## Note: inspect output has quotation characters, so sed to remove it as an argument
+set -e
 image_id=$(docker inspect --format="{{json .Id}}" $docker_image_name | sed -e 's/^"//' -e 's/"$//')
 
 ## Flatten the image by importing an exported container on this image
