@@ -42,6 +42,7 @@ RUN locale-gen
 # Install dependencies used by some plugins
 RUN pip3 install --no-cache-dir \
         hiredis                             \
+		aioredis==1.3.0                     \
         pyyaml                              \
         smbus
 
