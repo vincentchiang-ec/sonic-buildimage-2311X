@@ -21,6 +21,7 @@ try:
     import logging.config
     import logging.handlers
     import time
+    import subprocess
     import sonic_platform.platform
     from sonic_platform.helper import APIHelper
 except ImportError as e:
@@ -236,14 +237,37 @@ class device_monitor(object):
             path = I2C_PATH.format('0', '64') + 'pwr_enable_poe'
             self._api_helper.write_txt_file(path, 0)
 
+            #
+            # Because the R0A hardware does not have the system thermal
+            # shutdown (0x27) function, the power control (0x03) function
+            # is used for thermal shutdown. So for the R0A hardware, this
+            # thermal_shutdown sysfs is not functional.
+            #
+
             logging.critical(
                 'Alarm-Critical for temperature critical is detected, trigger thermal shutdown')
+
+            # Sync log buffer to disk for hardware revision R01 and above
+            cmd_str="sync"
+            status, output = subprocess.getstatusoutput(cmd_str)
+            cmd_str="/sbin/fstrim -av"
+            status, output = subprocess.getstatusoutput(cmd_str)
+            time.sleep(3)
+
             path = I2C_PATH.format('0', '64') + 'thermal_shutdown'
             time.sleep(2)
             self._api_helper.write_txt_file(path, 1)
 
             logging.critical(
                 'Alarm-Critical for temperature critical is detected, shutdown DUT')
+
+            # Sync log buffer to disk for hardware revision R0A
+            cmd_str="sync"
+            status, output = subprocess.getstatusoutput(cmd_str)
+            cmd_str="/sbin/fstrim -av"
+            status, output = subprocess.getstatusoutput(cmd_str)
+            time.sleep(3)
+
             path = I2C_PATH.format('0', '64') + 'pwr_enable_mb'
             time.sleep(2)
             self._api_helper.write_txt_file(path, 0)
