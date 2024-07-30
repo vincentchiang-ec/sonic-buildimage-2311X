@@ -5,6 +5,7 @@
 # When management VRF is enabled, the NTP application should be started using "ip vrf exec mgmt".
 # Check has been added to verify the management VRF enabled status and use "ip vrf exec mgmt"  when it is enabled.
 # This file will be copied to /usr/lib/ntp/ntp-systemd-wrapper file that gets created during build process.
+. /lib/lsb/init-functions
 
 DAEMON=/usr/sbin/ntpd
 PIDFILE=/var/run/ntpd.pid
