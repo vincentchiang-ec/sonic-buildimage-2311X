@@ -696,7 +696,7 @@ class TestCfgGen(TestCase):
     def test_metadata_ntp(self):
         argument = ['-m', self.sample_graph_metadata, '-p', self.port_config, '-v', "NTP_SERVER"]
         output = self.run_script(argument)
-        self.assertEqual(utils.to_dict(output.strip()), utils.to_dict("{'10.0.10.1': {'iburst': 'on'}, '10.0.10.2': {'iburst': 'on'}}"))
+        self.assertEqual(utils.to_dict(output.strip()), utils.to_dict("{'10.0.10.1': {'association_type': 'server', 'iburst': 'on', 'resolve_as': '10.0.10.1'}, '10.0.10.2': {'association_type': 'server', 'iburst': 'on', 'resolve_as': '10.0.10.2'}}"))
 
     def test_dns_nameserver(self):
         argument = ['-m', self.sample_graph_metadata, '-p', self.port_config, '-v', "DNS_NAMESERVER"]
@@ -1020,7 +1020,7 @@ class TestCfgGen(TestCase):
                 "'Vlan2000': {'dhcpv6_servers': ['fc02:2000::3', 'fc02:2000::4']}}"
             )
         )
-        
+
     def test_minigraph_packet_chassis_acl(self):
         argument = ['-m', self.packet_chassis_graph, '-p', self.packet_chassis_port_ini, '-v', "ACL_TABLE"]
         output = self.run_script(argument)
