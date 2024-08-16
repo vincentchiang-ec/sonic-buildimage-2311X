@@ -1,7 +1,11 @@
 {
     "chassis": {
-        "name": "4625-54T",
+        "name": "AS4625-54T",
         "thermal_manager": false,
+        "status_led": {
+            "controllable": true,
+            "colors": ["STATUS_LED_COLOR_GREEN", "STATUS_LED_COLOR_GREEN_BLINK", "STATUS_LED_COLOR_AMBER"]
+        },
         "components": [
             {
                 "name": "MB_CPLD"
@@ -45,6 +49,10 @@
         "fan_drawers":[
             {
                 "name": "FanTray-1",
+                "max_consumed_power": false,
+                "status_led": {
+                        "controllable": false
+                },
                 "num_fans" : 1,
                 "fans": [
                     {
@@ -61,6 +69,10 @@
             },
             {
                 "name": "FanTray-2",
+                "max_consumed_power": false,
+                "status_led": {
+                        "controllable": false
+                },
                 "num_fans" : 1,
                 "fans": [
                     {
@@ -77,6 +89,10 @@
             },
             {
                 "name": "FanTray-3",
+                "max_consumed_power": false,
+                "status_led": {
+                        "controllable": false
+                },
                 "num_fans" : 1,
                 "fans": [
                     {

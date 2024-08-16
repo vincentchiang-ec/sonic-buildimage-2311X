@@ -61,6 +61,7 @@
         "fan_drawers":[
             {
                 "name": "FanTray1",
+                "max_consumed_power": false,
                 "num_fans" : 2,
                 "fans": [
                     {
@@ -73,6 +74,7 @@
             },
             {
                 "name": "FanTray2",
+                "max_consumed_power": false,
                 "num_fans" : 2,
                 "fans": [
                     {
@@ -85,6 +87,7 @@
             },
             {
                 "name": "FanTray3",
+                "max_consumed_power": false,
                 "num_fans" : 2,
                 "fans": [
                     {
@@ -97,6 +100,7 @@
             },
             {
                 "name": "FanTray4",
+                "max_consumed_power": false,
                 "num_fans" : 2,
                 "fans": [
                     {
@@ -109,6 +113,7 @@
             },
             {
                 "name": "FanTray5",
+                "max_consumed_power": false,
                 "num_fans" : 2,
                 "fans": [
                     {
