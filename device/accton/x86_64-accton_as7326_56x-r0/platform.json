@@ -147,6 +147,7 @@
         "fan_drawers":[
             {
                 "name": "FanTray1",
+                "max_consumed_power": false,
                 "status_led": {
                     "controllable": false
                 },
@@ -176,6 +177,7 @@
             },
             {
                 "name": "FanTray2",
+                "max_consumed_power": false,
                 "status_led": {
                     "controllable": false
                 },
@@ -205,6 +207,7 @@
             },
             {
                 "name": "FanTray3",
+                "max_consumed_power": false,
                 "status_led": {
                     "controllable": false
                 },
@@ -234,6 +237,7 @@
             },
             {
                 "name": "FanTray4",
+                "max_consumed_power": false,
                 "status_led": {
                     "controllable": false
                 },
@@ -263,6 +267,7 @@
             },
             {
                 "name": "FanTray5",
+                "max_consumed_power": false,
                 "status_led": {
                     "controllable": false
                 },
@@ -292,6 +297,7 @@
             },
             {
                 "name": "FanTray6",
+                "max_consumed_power": false,
                 "status_led": {
                     "controllable": false
                 },
