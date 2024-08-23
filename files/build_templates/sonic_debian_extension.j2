@@ -798,8 +798,33 @@ sudo LANG=C DOCKER_HOST="$DOCKER_HOST" chroot $FILESYSTEM_ROOT /usr/local/bin/ge
 {% if include_kubernetes == "y" %}
 ## Pull in kubernetes docker images
 echo "pulling universal k8s images ..."
-sudo https_proxy=$https_proxy LANG=C chroot $FILESYSTEM_ROOT docker $SONIC_NATIVE_DOCKERD_FOR_DOCKERFS pull k8s.gcr.io/pause:${K8s_GCR_IO_PAUSE_VERSION}
-echo "docker images pull complete"
+
+MAX_ATTEMPTS=5
+RETRY_INTERVAL=10
+attempt=1
+
+# skip Exit immediately due to error retry
+set +e
+while [ $attempt -le $MAX_ATTEMPTS ]; do
+    output=$(sudo https_proxy=$https_proxy LANG=C chroot $FILESYSTEM_ROOT docker $SONIC_NATIVE_DOCKERD_FOR_DOCKERFS pull k8s.gcr.io/pause:${K8s_GCR_IO_PAUSE_VERSION} 2>&1)
+    exit_status=$?
+    if [ $exit_status -eq 0 ]; then
+        echo "docker images pull complete"
+        break
+    else
+        echo "Failed to pull Docker image. Error message:"
+        echo "$output"
+        echo "Retrying in $RETRY_INTERVAL seconds..."
+        sleep $RETRY_INTERVAL
+    fi
+
+    attempt=$(( $attempt + 1 ))
+done
+set -e
+if [ $attempt -gt $MAX_ATTEMPTS ]; then
+    echo "Failed to pull Docker image after $MAX_ATTEMPTS attempts."
+    exit 1
+fi
 {% endif %}
 
 {% if include_kubernetes_master == "y" %}
