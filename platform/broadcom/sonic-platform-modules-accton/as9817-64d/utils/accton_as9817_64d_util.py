@@ -438,6 +438,59 @@ def do_sonic_platform_clean():
 
     return
 
+device_path = f"{PLATFORM_ROOT_PATH}/x86_64-accton_{PROJECT_NAME}-r0"
+apply_ais800_cmds = [
+    f"cp -f {device_path}/platform.json.ais800 {device_path}/platform.json",
+    f"cp -f {device_path}/platform_components.json.ais800 {device_path}/platform_components.json",
+    f"cp -f {device_path}/pcie.yaml.ais800 {device_path}/pcie.yaml",
+]
+apply_as9817_cmds = [
+    f"cp -f {device_path}/platform.json.as9817 {device_path}/platform.json",
+    f"cp -f {device_path}/platform_components.json.as9817 {device_path}/platform_components.json",
+    f"cp -f {device_path}/pcie.yaml.as9817 {device_path}/pcie.yaml",
+]
+apply_cmd_sets = {
+    0x00 : apply_as9817_cmds, # OSFP
+    0x01 : apply_as9817_cmds, # QDD
+    0x02 : apply_ais800_cmds, # OSFP_ROT  ==> AIS800-64O
+    0x03 : apply_ais800_cmds  # QDD_ROT   ==> AIS800-64D
+}
+
+def get_pcb_id():
+    id = None
+    status, output = getstatusoutput_noshell("i2cget -f -y 0 0x60 0x00".split())
+    if status == 0:
+        try:
+            id = int(output, 16)
+        except Exception as e:
+            print(e)
+            pass
+
+    return id
+
+def apply_product_conf():
+    pcb_id = get_pcb_id()
+    if pcb_id is None:
+        print("Invalid PCB ID.")
+        return
+
+    apply_cmds = apply_cmd_sets.get((pcb_id >> 2) & 0x03, [])
+    if apply_cmds == []:
+        print("No matching commands found for the PCB ID.")
+        return
+
+    if apply_cmds == apply_ais800_cmds:
+        print("Apply AIS800 Configuration")
+    elif apply_cmds == apply_as9817_cmds:
+        print("Apply AS9817 Configuration")
+
+    for cmd in apply_cmds:
+        status, output = log_os_system(cmd, 1)
+        if status:
+            print(output)
+            if FORCE == 0:
+                return status
+
 def do_install():
     print("Checking system....")
     if driver_check() == False:
@@ -468,6 +521,8 @@ def do_install():
                 fd.write(str(FAN_PWM))
         except IOError as e:
             pass
+
+    apply_product_conf()
 
     do_sonic_platform_install()
 
