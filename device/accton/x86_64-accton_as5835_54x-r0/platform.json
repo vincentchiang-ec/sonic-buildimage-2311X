@@ -28,34 +28,64 @@
         ],
         "fans": [
             {
-                "name": "FAN-1F"
+                "name": "FAN-1F",
+                "status_led": {
+                    "controllable": false
+                }
             },
             {
-                "name": "FAN-1R"
+                "name": "FAN-1R",
+                "status_led": {
+                    "controllable": false
+                }
             },
             {
-                "name": "FAN-2F"
+                "name": "FAN-2F",
+                "status_led": {
+                    "controllable": false
+                }
             },
             {
-                "name": "FAN-2R"
+                "name": "FAN-2R",
+                "status_led": {
+                    "controllable": false
+                }
             },
             {
-                "name": "FAN-3F"
+                "name": "FAN-3F",
+                "status_led": {
+                    "controllable": false
+                }
             },
             {
-                "name": "FAN-3R"
+                "name": "FAN-3R",
+                "status_led": {
+                    "controllable": false
+                }
             },
             {
-                "name": "FAN-4F"
+                "name": "FAN-4F",
+                "status_led": {
+                    "controllable": false
+                }
             },
             {
-                "name": "FAN-4R"
+                "name": "FAN-4R",
+                "status_led": {
+                    "controllable": false
+                }
             },
             {
-                "name": "FAN-5F"
+                "name": "FAN-5F",
+                "status_led": {
+                    "controllable": false
+                }
             },
             {
-                "name": "FAN-5R"
+                "name": "FAN-5R",
+                "status_led": {
+                    "controllable": false
+                }
             }
         ],
         "fan_drawers":[
@@ -63,12 +93,21 @@
                 "name": "FanTray1",
                 "max_consumed_power": false,
                 "num_fans" : 2,
+                "status_led": {
+                    "controllable": false
+                },
                 "fans": [
                     {
-                        "name": "FAN-1F"
+                        "name": "FAN-1F",
+                        "status_led": {
+                            "controllable": false
+                        }
                     },
                     {
-                        "name": "FAN-1R"
+                        "name": "FAN-1R",
+                        "status_led": {
+                            "controllable": false
+                        }
                     }
                 ]
             },
@@ -76,12 +115,21 @@
                 "name": "FanTray2",
                 "max_consumed_power": false,
                 "num_fans" : 2,
+                "status_led": {
+                    "controllable": false
+                },
                 "fans": [
                     {
-                        "name": "FAN-2F"
+                        "name": "FAN-2F",
+                        "status_led": {
+                            "controllable": false
+                        }
                     },
                     {
-                        "name": "FAN-2R"
+                        "name": "FAN-2R",
+                        "status_led": {
+                            "controllable": false
+                        }
                     }
                 ]
             },
@@ -89,12 +137,21 @@
                 "name": "FanTray3",
                 "max_consumed_power": false,
                 "num_fans" : 2,
+                "status_led": {
+                    "controllable": false
+                },
                 "fans": [
                     {
-                        "name": "FAN-3F"
+                        "name": "FAN-3F",
+                        "status_led": {
+                            "controllable": false
+                        }
                     },
                     {
-                        "name": "FAN-3R"
+                        "name": "FAN-3R",
+                        "status_led": {
+                            "controllable": false
+                        }
                     }
                 ]
             },
@@ -102,12 +159,21 @@
                 "name": "FanTray4",
                 "max_consumed_power": false,
                 "num_fans" : 2,
+                "status_led": {
+                    "controllable": false
+                },
                 "fans": [
                     {
-                        "name": "FAN-4F"
+                        "name": "FAN-4F",
+                        "status_led": {
+                            "controllable": false
+                        }
                     },
                     {
-                        "name": "FAN-4R"
+                        "name": "FAN-4R",
+                        "status_led": {
+                            "controllable": false
+                        }
                     }
                 ]
             },
@@ -115,12 +181,21 @@
                 "name": "FanTray5",
                 "max_consumed_power": false,
                 "num_fans" : 2,
+                "status_led": {
+                    "controllable": false
+                },
                 "fans": [
                     {
-                        "name": "FAN-5F"
+                        "name": "FAN-5F",
+                        "status_led": {
+                            "controllable": false
+                        }
                     },
                     {
-                        "name": "FAN-5R"
+                        "name": "FAN-5R",
+                        "status_led": {
+                            "controllable": false
+                        }
                     }
                 ]
             }
