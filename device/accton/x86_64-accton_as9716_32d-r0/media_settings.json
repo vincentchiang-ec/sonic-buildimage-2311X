@@ -1,450 +1,450 @@
 {
     "PORT_MEDIA_SETTINGS": {
-        "0": {
-            "Default": {
-                "preemphasis": {
-                    "lane0": "0x00187c08", 
-                    "lane1": "0x00187c08", 
-                    "lane2": "0x00187c08", 
-                    "lane3": "0x00187c08", 
-                    "lane4": "0x00187c08", 
-                    "lane5": "0x00147c0c", 
-                    "lane6": "0x00187408", 
-                    "lane7": "0x00147c08"
-                }
-            }
-        }, 
         "1": {
             "Default": {
                 "preemphasis": {
-                    "lane0": "0x00187808", 
-                    "lane1": "0x00187c08", 
-                    "lane2": "0x0014800c", 
-                    "lane3": "0x00147c08", 
-                    "lane4": "0x000c8418",
-                    "lane5": "0x000c8418",
-                    "lane6": "0x000c8418",
-                    "lane7": "0x000c8418"
+                    "lane0": "0x187c08",
+                    "lane1": "0x187c08",
+                    "lane2": "0x187c08",
+                    "lane3": "0x187c08",
+                    "lane4": "0x187c08",
+                    "lane5": "0x147c0c",
+                    "lane6": "0x187408",
+                    "lane7": "0x147c08"
                 }
             }
-        }, 
+        },
         "2": {
             "Default": {
                 "preemphasis": {
-                    "lane0": "0x00147c08", 
-                    "lane1": "0x00147c08", 
-                    "lane2": "0x00147c08", 
-                    "lane3": "0x00147c08", 
-                    "lane4": "0x00147c08", 
-                    "lane5": "0x00147c0c", 
-                    "lane6": "0x00147c08", 
-                    "lane7": "0x00147c08"
+                    "lane0": "0x187808",
+                    "lane1": "0x187c08",
+                    "lane2": "0x14800c",
+                    "lane3": "0x147c08",
+                    "lane4": "0x147c08",
+                    "lane5": "0x147c0c",
+                    "lane6": "0x187c08",
+                    "lane7": "0x147c08"
                 }
             }
-        }, 
+        },
         "3": {
             "Default": {
                 "preemphasis": {
-                    "lane0": "0x00187c08", 
-                    "lane1": "0x00147c08", 
-                    "lane2": "0x00147c08", 
-                    "lane3": "0x00147c08", 
-                    "lane4": "0x00187c08", 
-                    "lane5": "0x00147c0c", 
-                    "lane6": "0x00147c08", 
-                    "lane7": "0x00147c08"
+                    "lane0": "0x147c08",
+                    "lane1": "0x147c08",
+                    "lane2": "0x147c08",
+                    "lane3": "0x147c08",
+                    "lane4": "0x147c08",
+                    "lane5": "0x147c0c",
+                    "lane6": "0x147c08",
+                    "lane7": "0x147c08"
                 }
             }
-        }, 
+        },
         "4": {
             "Default": {
                 "preemphasis": {
-                    "lane0": "0x00147c08", 
-                    "lane1": "0x00147c08", 
-                    "lane2": "0x00147c08", 
-                    "lane3": "0x00147c08", 
-                    "lane4": "0x00147c08", 
-                    "lane5": "0x00147c0c", 
-                    "lane6": "0x00147c08", 
-                    "lane7": "0x00147c08"
+                    "lane0": "0x187c08",
+                    "lane1": "0x147c08",
+                    "lane2": "0x147c08",
+                    "lane3": "0x147c08",
+                    "lane4": "0x187c08",
+                    "lane5": "0x147c0c",
+                    "lane6": "0x147c08",
+                    "lane7": "0x147c08"
                 }
             }
-        }, 
+        },
         "5": {
             "Default": {
                 "preemphasis": {
-                    "lane0": "0x00147c08", 
-                    "lane1": "0x001c7c08", 
-                    "lane2": "0x00087c08", 
-                    "lane3": "0x00147c08", 
-                    "lane4": "0x000c7c08", 
-                    "lane5": "0x00147c0c", 
-                    "lane6": "0x00147c08", 
-                    "lane7": "0x00147c08"
+                    "lane0": "0x147c08",
+                    "lane1": "0x147c08",
+                    "lane2": "0x147c08",
+                    "lane3": "0x147c08",
+                    "lane4": "0x147c08",
+                    "lane5": "0x147c0c",
+                    "lane6": "0x147c08",
+                    "lane7": "0x147c08"
                 }
             }
-        }, 
+        },
         "6": {
             "Default": {
                 "preemphasis": {
-                    "lane0": "0x000c8008", 
-                    "lane1": "0x000c8008", 
-                    "lane2": "0x000c8008", 
-                    "lane3": "0x000c8008", 
-                    "lane4": "0x000c8008", 
-                    "lane5": "0x00147c0c", 
-                    "lane6": "0x00107c08", 
-                    "lane7": "0x000c7c08"
+                    "lane0": "0x147c08",
+                    "lane1": "0x1c7c08",
+                    "lane2": "0x087c08",
+                    "lane3": "0x147c08",
+                    "lane4": "0x0c7c08",
+                    "lane5": "0x147c0c",
+                    "lane6": "0x147c08",
+                    "lane7": "0x147c08"
                 }
             }
-        }, 
+        },
         "7": {
             "Default": {
                 "preemphasis": {
-                    "lane0": "0x000c7c08", 
-                    "lane1": "0x00087c08", 
-                    "lane2": "0x00087c08", 
-                    "lane3": "0x000c7c08", 
-                    "lane4": "0x00087c08", 
-                    "lane5": "0x000c7c0c", 
-                    "lane6": "0x000c7c08", 
-                    "lane7": "0x00107c08"
+                    "lane0": "0x0c8008",
+                    "lane1": "0x0c8008",
+                    "lane2": "0x0c8008",
+                    "lane3": "0x0c7c08",
+                    "lane4": "0x0c7c08",
+                    "lane5": "0x147c0c",
+                    "lane6": "0x107c08",
+                    "lane7": "0x0c7c08"
                 }
             }
-        }, 
+        },
         "8": {
             "Default": {
                 "preemphasis": {
-                    "lane0": "0x00187c08", 
-                    "lane1": "0x00148010", 
-                    "lane2": "0x00147c08", 
-                    "lane3": "0x00107c08", 
-                    "lane4": "0x00187c08", 
-                    "lane5": "0x00107c0c", 
-                    "lane6": "0x00147c08", 
-                    "lane7": "0x00147c08"
+                    "lane0": "0x0c7c08",
+                    "lane1": "0x087c08",
+                    "lane2": "0x087c08",
+                    "lane3": "0x0c7c08",
+                    "lane4": "0x087c08",
+                    "lane5": "0x0c7c0c",
+                    "lane6": "0x0c7c08",
+                    "lane7": "0x107c08"
                 }
             }
-        }, 
+        },
         "9": {
             "Default": {
                 "preemphasis": {
-                    "lane0": "0x00147c0c", 
-                    "lane1": "0x001c7408", 
-                    "lane2": "0x00187408", 
-                    "lane3": "0x0018780c", 
-                    "lane4": "0x00187808", 
-                    "lane5": "0x00147c0c", 
-                    "lane6": "0x00187408", 
-                    "lane7": "0x00187408"
+                    "lane0": "0x187c08",
+                    "lane1": "0x148010",
+                    "lane2": "0x147c08",
+                    "lane3": "0x107c08",
+                    "lane4": "0x187c08",
+                    "lane5": "0x107c0c",
+                    "lane6": "0x147c08",
+                    "lane7": "0x147c08"
                 }
             }
-        }, 
+        },
         "10": {
             "Default": {
                 "preemphasis": {
-                    "lane0": "0x000c8008", 
-                    "lane1": "0x00147408", 
-                    "lane2": "0x00147c08", 
-                    "lane3": "0x00108008", 
-                    "lane4": "0x0010800c", 
-                    "lane5": "0x00147c0c", 
-                    "lane6": "0x00147c08", 
-                    "lane7": "0x00147c08"
+                    "lane0": "0x147c0c",
+                    "lane1": "0x1c7408",
+                    "lane2": "0x187408",
+                    "lane3": "0x18780c",
+                    "lane4": "0x187808",
+                    "lane5": "0x147c0c",
+                    "lane6": "0x187408",
+                    "lane7": "0x187408"
                 }
             }
-        }, 
+        },
         "11": {
             "Default": {
                 "preemphasis": {
-                    "lane0": "0x00187c08", 
-                    "lane1": "0x000c7c08", 
-                    "lane2": "0x00107c08", 
-                    "lane3": "0x00147408", 
-                    "lane4": "0x00147c08", 
-                    "lane5": "0x00147c0c", 
-                    "lane6": "0x00147c08", 
-                    "lane7": "0x00107c08"
+                    "lane0": "0x0c8008",
+                    "lane1": "0x147408",
+                    "lane2": "0x147c08",
+                    "lane3": "0x108008",
+                    "lane4": "0x10800c",
+                    "lane5": "0x147c0c",
+                    "lane6": "0x147c08",
+                    "lane7": "0x147c08"
                 }
             }
-        }, 
+        },
         "12": {
             "Default": {
                 "preemphasis": {
-                    "lane0": "0x00088008", 
-                    "lane1": "0x00088008", 
-                    "lane2": "0x000c7c08", 
-                    "lane3": "0x00087c08", 
-                    "lane4": "0x00087c08", 
-                    "lane5": "0x00087c0c", 
-                    "lane6": "0x00047c08", 
-                    "lane7": "0x00047c08"
+                    "lane0": "0x187c08",
+                    "lane1": "0x0c7c08",
+                    "lane2": "0x107c08",
+                    "lane3": "0x147408",
+                    "lane4": "0x147c08",
+                    "lane5": "0x147c0c",
+                    "lane6": "0x147c08",
+                    "lane7": "0x107c08"
                 }
             }
-        }, 
+        },
         "13": {
             "Default": {
                 "preemphasis": {
-                    "lane0": "0x00087c08", 
-                    "lane1": "0x00087c08", 
-                    "lane2": "0x00087c08", 
-                    "lane3": "0x00087c08", 
-                    "lane4": "0x00087c08", 
-                    "lane5": "0x00087c0c", 
-                    "lane6": "0x00087c08", 
-                    "lane7": "0x00088008"
+                    "lane0": "0x088008",
+                    "lane1": "0x088008",
+                    "lane2": "0x0c7c08",
+                    "lane3": "0x087c08",
+                    "lane4": "0x087c08",
+                    "lane5": "0x087c0c",
+                    "lane6": "0x047c08",
+                    "lane7": "0x047c08"
                 }
             }
-        }, 
+        },
         "14": {
             "Default": {
                 "preemphasis": {
-                    "lane0": "0x00088008", 
-                    "lane1": "0x00088008", 
-                    "lane2": "0x00087c08", 
-                    "lane3": "0x00087c08", 
-                    "lane4": "0x000c7c08", 
-                    "lane5": "0x00087c0c", 
-                    "lane6": "0x00047c08", 
-                    "lane7": "0x00087c08"
+                    "lane0": "0x087c08",
+                    "lane1": "0x087c08",
+                    "lane2": "0x087c08",
+                    "lane3": "0x087c08",
+                    "lane4": "0x087c08",
+                    "lane5": "0x087c0c",
+                    "lane6": "0x087c08",
+                    "lane7": "0x088008"
                 }
             }
-        }, 
+        },
         "15": {
             "Default": {
                 "preemphasis": {
-                    "lane0": "0x00087c08", 
-                    "lane1": "0x00087c08", 
-                    "lane2": "0x00087c08", 
-                    "lane3": "0x00087c08", 
-                    "lane4": "0x00087c08", 
-                    "lane5": "0x00087c0c", 
-                    "lane6": "0x00087c08", 
-                    "lane7": "0x00087c08"
+                    "lane0": "0x088008",
+                    "lane1": "0x088008",
+                    "lane2": "0x087c08",
+                    "lane3": "0x087c08",
+                    "lane4": "0x0c7c08",
+                    "lane5": "0x087c0c",
+                    "lane6": "0x047c08",
+                    "lane7": "0x087c08"
                 }
             }
-        }, 
+        },
         "16": {
             "Default": {
                 "preemphasis": {
-                    "lane0": "0x00088008", 
-                    "lane1": "0x00088008", 
-                    "lane2": "0x00087c08", 
-                    "lane3": "0x00087c08", 
-                    "lane4": "0x000c7c08", 
-                    "lane5": "0x00087c0c", 
-                    "lane6": "0x000c7c08", 
-                    "lane7": "0x000c7c08"
+                    "lane0": "0x087c08",
+                    "lane1": "0x087c08",
+                    "lane2": "0x087c08",
+                    "lane3": "0x087c08",
+                    "lane4": "0x087c08",
+                    "lane5": "0x087c0c",
+                    "lane6": "0x087c08",
+                    "lane7": "0x087c08"
                 }
             }
-        }, 
+        },
         "17": {
             "Default": {
                 "preemphasis": {
-                    "lane0": "0x00087c08", 
-                    "lane1": "0x000c7c08", 
-                    "lane2": "0x00087c08", 
-                    "lane3": "0x00087c08", 
-                    "lane4": "0x000c7c08", 
-                    "lane5": "0x00087c0c", 
-                    "lane6": "0x00087c08", 
-                    "lane7": "0x00087c08"
+                    "lane0": "0x088008",
+                    "lane1": "0x088008",
+                    "lane2": "0x087c08",
+                    "lane3": "0x087c08",
+                    "lane4": "0x0c7c08",
+                    "lane5": "0x087c0c",
+                    "lane6": "0x0c7c08",
+                    "lane7": "0x0c7c08"
                 }
             }
-        }, 
+        },
         "18": {
             "Default": {
                 "preemphasis": {
-                    "lane0": "0x00088008", 
-                    "lane1": "0x00088008", 
-                    "lane2": "0x00087c08", 
-                    "lane3": "0x00087c08", 
-                    "lane4": "0x000c7c08", 
-                    "lane5": "0x00087c0c", 
-                    "lane6": "0x00087c08", 
-                    "lane7": "0x000c7c08"
+                    "lane0": "0x087c08",
+                    "lane1": "0x0c7c08",
+                    "lane2": "0x087c08",
+                    "lane3": "0x087c08",
+                    "lane4": "0x0c7c08",
+                    "lane5": "0x087c0c",
+                    "lane6": "0x087c08",
+                    "lane7": "0x087c08"
                 }
             }
-        }, 
+        },
         "19": {
             "Default": {
                 "preemphasis": {
-                    "lane0": "0x00087c08", 
-                    "lane1": "0x00087c08", 
-                    "lane2": "0x00087c08", 
-                    "lane3": "0x00047c08", 
-                    "lane4": "0x0018840c", 
-                    "lane5": "0x00207c0c", 
-                    "lane6": "0x00087c08", 
-                    "lane7": "0x00087c08"
+                    "lane0": "0x088008",
+                    "lane1": "0x088008",
+                    "lane2": "0x087c08",
+                    "lane3": "0x087c08",
+                    "lane4": "0x0c7c08",
+                    "lane5": "0x087c0c",
+                    "lane6": "0x087c08",
+                    "lane7": "0x0c7c08"
                 }
             }
-        }, 
+        },
         "20": {
             "Default": {
                 "preemphasis": {
-                    "lane0": "0x000c8008", 
-                    "lane1": "0x000c8008", 
-                    "lane2": "0x00087c08", 
-                    "lane3": "0x000c7c08", 
-                    "lane4": "0x000c7c08", 
-                    "lane5": "0x00087c0c", 
-                    "lane6": "0x00107c08", 
-                    "lane7": "0x00147c08"
+                    "lane0": "0x087c08",
+                    "lane1": "0x087c08",
+                    "lane2": "0x087c08",
+                    "lane3": "0x047c08",
+                    "lane4": "0x08808",
+                    "lane5": "0x10800c",
+                    "lane6": "0x087c08",
+                    "lane7": "0x087c08"
                 }
             }
-        }, 
+        },
         "21": {
             "Default": {
                 "preemphasis": {
-                    "lane0": "0x00107c08", 
-                    "lane1": "0x00147c08", 
-                    "lane2": "0x000c7c08", 
-                    "lane3": "0x000c7c08", 
-                    "lane4": "0x00107c08", 
-                    "lane5": "0x00147c0c", 
-                    "lane6": "0x00147c08", 
-                    "lane7": "0x00107c08"
+                    "lane0": "0x0c8008",
+                    "lane1": "0x0c8008",
+                    "lane2": "0x087c08",
+                    "lane3": "0x0c7c08",
+                    "lane4": "0x0c7c08",
+                    "lane5": "0x087c0c",
+                    "lane6": "0x107c08",
+                    "lane7": "0x147c08"
                 }
             }
-        }, 
+        },
         "22": {
             "Default": {
                 "preemphasis": {
-                    "lane0": "0x000c8014", 
-                    "lane1": "0x001c740c", 
-                    "lane2": "0x00147808", 
-                    "lane3": "0x001c8008", 
-                    "lane4": "0x00147c08", 
-                    "lane5": "0x00147c0c", 
-                    "lane6": "0x00187c08", 
-                    "lane7": "0x0018800c"
+                    "lane0": "0x107c08",
+                    "lane1": "0x147c08",
+                    "lane2": "0x0c7c08",
+                    "lane3": "0x0c7c08",
+                    "lane4": "0x107c08",
+                    "lane5": "0x147c0c",
+                    "lane6": "0x147c08",
+                    "lane7": "0x107c08"
                 }
             }
-        }, 
+        },
         "23": {
             "Default": {
                 "preemphasis": {
-                    "lane0": "0x0024780c", 
-                    "lane1": "0x00247410", 
-                    "lane2": "0x0024780c", 
-                    "lane3": "0x00187408", 
-                    "lane4": "0x00207408", 
-                    "lane5": "0x00207408", 
-                    "lane6": "0x00187408", 
-                    "lane7": "0x0024780c"
+                    "lane0": "0x0c8014",
+                    "lane1": "0x1c740c",
+                    "lane2": "0x147808",
+                    "lane3": "0x1c8008",
+                    "lane4": "0x147c08",
+                    "lane5": "0x147c0c",
+                    "lane6": "0x187c08",
+                    "lane7": "0x18800c"
                 }
             }
-        }, 
+        },
         "24": {
             "Default": {
                 "preemphasis": {
-                    "lane0": "0x00088008", 
-                    "lane1": "0x000c8008", 
-                    "lane2": "0x00087c08", 
-                    "lane3": "0x000c7c08", 
-                    "lane4": "0x000c7c08", 
-                    "lane5": "0x000c7c0c", 
-                    "lane6": "0x000c7c08", 
-                    "lane7": "0x00107c08"
+                    "lane0": "0x1c800c",
+                    "lane1": "0x207c0c",
+                    "lane2": "0x1c800c",
+                    "lane3": "0x187408",
+                    "lane4": "0x207408",
+                    "lane5": "0x207c0c",
+                    "lane6": "0x187408",
+                    "lane7": "0x208008"
                 }
             }
-        }, 
+        },
         "25": {
             "Default": {
                 "preemphasis": {
-                    "lane0": "0x00087c08", 
-                    "lane1": "0x000c7c08", 
-                    "lane2": "0x000c7808", 
-                    "lane3": "0x00107c08", 
-                    "lane4": "0x000c7c08", 
-                    "lane5": "0x000c7c0c", 
-                    "lane6": "0x000c7c08", 
-                    "lane7": "0x00147c08"
+                    "lane0": "0x088008",
+                    "lane1": "0x0c8008",
+                    "lane2": "0x087c08",
+                    "lane3": "0x0c7c08",
+                    "lane4": "0x0c7c08",
+                    "lane5": "0x0c7c0c",
+                    "lane6": "0x0c7c08",
+                    "lane7": "0x107c08"
                 }
             }
-        }, 
+        },
         "26": {
             "Default": {
                 "preemphasis": {
-                    "lane0": "0x000c8008", 
-                    "lane1": "0x00107808", 
-                    "lane2": "0x000c7c08", 
-                    "lane3": "0x00108008", 
-                    "lane4": "0x00147c08", 
-                    "lane5": "0x000c7c0c", 
-                    "lane6": "0x00147c08", 
-                    "lane7": "0x00147c08"
+                    "lane0": "0x087c08",
+                    "lane1": "0x0c7c08",
+                    "lane2": "0x0c7808",
+                    "lane3": "0x107c08",
+                    "lane4": "0x0c7c08",
+                    "lane5": "0x0c7c0c",
+                    "lane6": "0x0c7c08",
+                    "lane7": "0x147c08"
                 }
             }
-        }, 
+        },
         "27": {
             "Default": {
                 "preemphasis": {
-                    "lane0": "0x00107c08", 
-                    "lane1": "0x00147c08", 
-                    "lane2": "0x00147c08", 
-                    "lane3": "0x00107c08", 
-                    "lane4": "0x00147c08", 
-                    "lane5": "0x00107c0c", 
-                    "lane6": "0x00107c08", 
-                    "lane7": "0x00147c08"
+                    "lane0": "0x0c8008",
+                    "lane1": "0x107808",
+                    "lane2": "0x0c7c08",
+                    "lane3": "0x108008",
+                    "lane4": "0x147c08",
+                    "lane5": "0x0c7c0c",
+                    "lane6": "0x147c08",
+                    "lane7": "0x147c08"
                 }
             }
-        }, 
+        },
         "28": {
             "Default": {
                 "preemphasis": {
-                    "lane0": "0x00188008", 
-                    "lane1": "0x00108010", 
-                    "lane2": "0x00187c04", 
-                    "lane3": "0x00147c08", 
-                    "lane4": "0x00187c08", 
-                    "lane5": "0x00107c0c", 
-                    "lane6": "0x00187c08", 
-                    "lane7": "0x00147c08"
+                    "lane0": "0x107c08",
+                    "lane1": "0x147c08",
+                    "lane2": "0x147c08",
+                    "lane3": "0x107c08",
+                    "lane4": "0x147c08",
+                    "lane5": "0x107c0c",
+                    "lane6": "0x107c08",
+                    "lane7": "0x147c08"
                 }
             }
-        }, 
+        },
         "29": {
             "Default": {
                 "preemphasis": {
-                    "lane0": "0x00147c08", 
-                    "lane1": "0x00147c08", 
-                    "lane2": "0x00147c08", 
-                    "lane3": "0x00147c08", 
-                    "lane4": "0x00147c08", 
-                    "lane5": "0x00147c0c", 
-                    "lane6": "0x00107c08", 
-                    "lane7": "0x00187c08"
+                    "lane0": "0x188008",
+                    "lane1": "0x108010",
+                    "lane2": "0x187c04",
+                    "lane3": "0x147c08",
+                    "lane4": "0x187c08",
+                    "lane5": "0x107c0c",
+                    "lane6": "0x187c08",
+                    "lane7": "0x147c08"
                 }
             }
-        }, 
+        },
         "30": {
             "Default": {
                 "preemphasis": {
-                    "lane0": "0x000c8010", 
-                    "lane1": "0x00187c08", 
-                    "lane2": "0x00147c04", 
-                    "lane3": "0x00147c08", 
-                    "lane4": "0x00147c08", 
-                    "lane5": "0x00147c0c", 
-                    "lane6": "0x00147c08", 
-                    "lane7": "0x00147c08"
+                    "lane0": "0x147c08",
+                    "lane1": "0x147c08",
+                    "lane2": "0x147c08",
+                    "lane3": "0x147c08",
+                    "lane4": "0x147c08",
+                    "lane5": "0x147c0c",
+                    "lane6": "0x107c08",
+                    "lane7": "0x187c08"
                 }
             }
-        }, 
+        },
         "31": {
             "Default": {
                 "preemphasis": {
-                    "lane0": "0x00147c08", 
-                    "lane1": "0x00187c08", 
-                    "lane2": "0x00147c08", 
-                    "lane3": "0x00187c08", 
-                    "lane4": "0x00147c08", 
-                    "lane5": "0x00147c0c", 
-                    "lane6": "0x00147c08", 
-                    "lane7": "0x00187c08"
+                    "lane0": "0x0c8010",
+                    "lane1": "0x187c08",
+                    "lane2": "0x147c04",
+                    "lane3": "0x147c08",
+                    "lane4": "0x147c08",
+                    "lane5": "0x147c0c",
+                    "lane6": "0x147c08",
+                    "lane7": "0x147c08"
+                }
+            }
+        },
+        "32": {
+            "Default": {
+                "preemphasis": {
+                    "lane0": "0x147c08",
+                    "lane1": "0x187c08",
+                    "lane2": "0x147c08",
+                    "lane3": "0x187c08",
+                    "lane4": "0x147c08",
+                    "lane5": "0x147c0c",
+                    "lane6": "0x147c08",
+                    "lane7": "0x187c08"
                 }
             }
         }
