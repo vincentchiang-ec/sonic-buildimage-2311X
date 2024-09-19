@@ -7,7 +7,10 @@
 
 try:
     import subprocess
+    import os
+    import json
     from sonic_platform_base.component_base import ComponentBase
+    from sonic_py_common.general import getstatusoutput_noshell
 except ImportError as e:
     raise ImportError(str(e) + "- required module not found")
 
@@ -100,7 +103,36 @@ class Component(ComponentBase):
         Returns:
             A boolean, True if install successfully, False if not
         """
-        raise NotImplementedError
+        ret, output = getstatusoutput_noshell(["tar", "-C", "/tmp", "-xzf", image_path ] )
+        if ret != 0:
+            print("Installation failed because of wrong image package")
+            return False
+
+        if  False == os.path.exists("/tmp/install.json"):
+            print("Installation failed without jsonfile")
+            return False
+
+        input_file = open ('/tmp/install.json')
+        json_array = json.load(input_file)
+        ret = 1
+        for item in json_array:
+            if item.get('id') == None or item.get('path') == None:
+                continue
+            if self.name == item['id'] and item['path'] and item.get('cpu'):
+                print( "Find", item['id'], item['path'], item['cpu'] )
+                ret, output = getstatusoutput_noshell(["/tmp/run_install.sh", item['id'], item['path'], item['cpu'] ])
+                if ret == 0:
+                    break
+            elif self.name == item['id'] and item['path']:
+                print( "Find", item['id'], item['path'] )
+                ret, output = getstatusoutput_noshell(["/tmp/run_install.sh", item['id'], item['path'] ])
+                if ret == 0:
+                    break
+
+        if ret == 0:
+            return True
+        else:
+            return False
 
     def get_presence(self):
         """
