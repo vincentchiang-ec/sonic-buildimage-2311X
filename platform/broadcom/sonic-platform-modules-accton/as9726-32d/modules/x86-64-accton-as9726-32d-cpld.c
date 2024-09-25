@@ -37,6 +37,11 @@
 #define I2C_RW_RETRY_COUNT				10
 #define I2C_RW_RETRY_INTERVAL			60 /* ms */
 
+#define I2C_CPLD_ADDRESS      0x65
+#define RESET_SYSTEM_REGISTER 0x4
+
+extern void (*platform_specific_op_in_reboot_fp)(void);
+
 static LIST_HEAD(cpld_client_list);
 static struct mutex     list_lock;
 
@@ -187,7 +192,7 @@ enum as9726_32d_cpld_sysfs_attributes {
 	CPLD_INTR_ATTR_ID(2),
 	CPLD_INTR_ATTR_ID(3),
 	CPLD_INTR_ATTR_ID(4),
-	
+	RESET_MAC_BEFORE_REBOOT,
 };
 
 /* sysfs attributes for hwmon 
@@ -212,6 +217,9 @@ static ssize_t set_mode_lpmode(struct device *dev, struct device_attribute *da,
 			const char *buf, size_t count);
 static int as9726_32d_cpld_read_internal(struct i2c_client *client, u8 reg);
 static int as9726_32d_cpld_write_internal(struct i2c_client *client, u8 reg, u8 value);
+
+static ssize_t show_reset_mac_before_reboot(struct device *dev, struct device_attribute *da, char *buf);
+static ssize_t reset_mac_before_reboot(struct device *dev, struct device_attribute *da, const char *buf, size_t count);
 
 /* transceiver attributes */
 #define DECLARE_TRANSCEIVER_PRESENT_SENSOR_DEVICE_ATTR(index) \
@@ -246,6 +254,10 @@ static int as9726_32d_cpld_write_internal(struct i2c_client *client, u8 reg, u8 
 
 static SENSOR_DEVICE_ATTR(version, S_IRUGO, show_version, NULL, CPLD_VERSION);
 static SENSOR_DEVICE_ATTR(access, S_IWUSR, NULL, access, ACCESS);
+
+/* reset bcm mac attributes */
+static SENSOR_DEVICE_ATTR(reset_mac_before_reboot, S_IRUGO | S_IWUSR, show_reset_mac_before_reboot, reset_mac_before_reboot, RESET_MAC_BEFORE_REBOOT);
+
 /* transceiver attributes */
 DECLARE_TRANSCEIVER_PRESENT_SENSOR_DEVICE_ATTR(1);
 DECLARE_TRANSCEIVER_PRESENT_SENSOR_DEVICE_ATTR(2);
@@ -490,6 +502,7 @@ static const struct attribute_group as9726_32d_cpld3_group = {
 
 static struct attribute *as9726_32d_cpld_cpu_attributes[] = {
     &sensor_dev_attr_version.dev_attr.attr,
+    &sensor_dev_attr_reset_mac_before_reboot.dev_attr.attr,
 	NULL
 };
 
@@ -1085,6 +1098,10 @@ static int as9726_32d_cpld_remove(struct i2c_client *client)
 
     kfree(data);
 
+    if (platform_specific_op_in_reboot_fp) {
+        platform_specific_op_in_reboot_fp = NULL;
+    }
+
     return 0;
 }
 
@@ -1171,6 +1188,49 @@ int as9726_32d_cpld_write(unsigned short cpld_addr, u8 reg, u8 value)
     return ret;
 }
 EXPORT_SYMBOL(as9726_32d_cpld_write);
+
+void reset_mac_before_reboot_by_cpld(void)
+{
+    as9726_32d_cpld_write(I2C_CPLD_ADDRESS, RESET_SYSTEM_REGISTER, 0x15);
+
+    return ;
+}
+EXPORT_SYMBOL(reset_mac_before_reboot_by_cpld);
+
+static ssize_t show_reset_mac_before_reboot(struct device *dev, struct device_attribute *da, char *buf)
+{
+    int val = 0;
+
+    if (platform_specific_op_in_reboot_fp) {
+        val = 1;
+    } else {
+        val = 0;
+    }
+
+    return sprintf(buf, "%d\n", val);
+}
+
+static ssize_t reset_mac_before_reboot(struct device *dev, struct device_attribute *da, const char *buf, size_t count)
+{
+    int error, value;
+
+    error = kstrtoint(buf, 10, &value);
+    if (error)
+        return error;
+
+    switch(value) {
+        case 0:
+            platform_specific_op_in_reboot_fp = NULL;
+            break;
+        case 1:
+            platform_specific_op_in_reboot_fp = reset_mac_before_reboot_by_cpld;
+            break;
+        default:
+            return -EINVAL;
+    }
+
+    return count;
+}
 
 static struct i2c_driver as9726_32d_cpld_driver = {
 	.driver		= {
