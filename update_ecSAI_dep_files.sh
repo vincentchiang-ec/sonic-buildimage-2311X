@@ -35,6 +35,34 @@ cp -f $SONIC_BASE/sonic-buildimage/device/accton/x86_64-accton_as9817_64o-r0/Acc
 cp -f $SONIC_BASE/sonic-buildimage/device/accton/x86_64-accton_as9817_64o-r0/Accton-AS9817-64O/th5-as9817-64o-64x800G_ec.config.yml \
          $SONIC_BASE/sonic-buildimage/device/accton/x86_64-accton_as9817_64o-r0/Accton-AS9817-64O/th5-as9817-64o-64x800G.config.yml
 
+## update files for as4630
+
+cp -f $SONIC_BASE/sonic-buildimage/device/accton/x86_64-accton_as4630_54pe-r0/Accton-AS4630-54PE/hx5-as4630-48x1G+4x25G+2x100G_ec.bcm  \
+         $SONIC_BASE/sonic-buildimage/device/accton/x86_64-accton_as4630_54pe-r0/Accton-AS4630-54PE/hx5-as4630-48x1G+4x25G+2x100G.bcm
+cp -f $SONIC_BASE/sonic-buildimage/device/accton/x86_64-accton_as4630_54te-r0/Accton-AS4630-54TE/hx5-as4630-48x1G+4x25G+2x100G_ec.bcm \
+         $SONIC_BASE/sonic-buildimage/device/accton/x86_64-accton_as4630_54te-r0/Accton-AS4630-54TE/hx5-as4630-48x1G+4x25G+2x100G.bcm
+
+##update files for as5835
+
+cp -f $SONIC_BASE/sonic-buildimage/device/accton/x86_64-accton_as5835_54t-r0/Accton-AS5835-54T/mv2-as5835t-48x10G+6x100G_ec.config.bcm  \
+         $SONIC_BASE/sonic-buildimage/device/accton/x86_64-accton_as5835_54t-r0/Accton-AS5835-54T/mv2-as5835t-48x10G+6x100G.config.bcm
+cp -f $SONIC_BASE/sonic-buildimage/device/accton/x86_64-accton_as5835_54x-r0/Accton-AS5835-54X/mv2-as5835-48x10G+6x100G_ec.config.bcm \
+         $SONIC_BASE/sonic-buildimage/device/accton/x86_64-accton_as5835_54x-r0/Accton-AS5835-54X/mv2-as5835-48x10G+6x100G.config.bcm
+
+##update files for as7326 & as7726
+
+cp -f $SONIC_BASE/sonic-buildimage/device/accton/x86_64-accton_as7326_56x-r0/Accton-AS7326-56X/td3-as7326-48x25G+8x100G_ec.config.bcm  \
+         $SONIC_BASE/sonic-buildimage/device/accton/x86_64-accton_as7326_56x-r0/Accton-AS7326-56X/td3-as7326-48x25G+8x100G.config.bcm
+cp -f $SONIC_BASE/sonic-buildimage/device/accton/x86_64-accton_as7726_32x-r0/Accton-AS7726-32X/td3-as7726-32x100G_ec.config.bcm \
+         $SONIC_BASE/sonic-buildimage/device/accton/x86_64-accton_as7726_32x-r0/Accton-AS7726-32X/td3-as7726-32x100G.config.bcm
+
+##update files for  as9716
+
+cp -f $SONIC_BASE/sonic-buildimage/device/accton/x86_64-accton_as9716_32d-r0/Accton-AS9716-32D-100G/th3-as9716-32x100G_ec.config.bcm  \
+         $SONIC_BASE/sonic-buildimage/device/accton/x86_64-accton_as9716_32d-r0/Accton-AS9716-32D-100G/th3-as9716-32x100G.config.bcm
+cp -f $SONIC_BASE/sonic-buildimage/device/accton/x86_64-accton_as9716_32d-r0/Accton-AS9716-32D/th3-as9716-32x400G_ec.config.bcm \
+         $SONIC_BASE/sonic-buildimage/device/accton/x86_64-accton_as9716_32d-r0/Accton-AS9716-32D/th3-as9716-32x400G.config.bcm
+
 ## rebuild sonic-device-data
 rm -f $SONIC_BASE/sonic-buildimage/target/debs/bullseye/sonic-device-data_1.0-1_all.deb
 
