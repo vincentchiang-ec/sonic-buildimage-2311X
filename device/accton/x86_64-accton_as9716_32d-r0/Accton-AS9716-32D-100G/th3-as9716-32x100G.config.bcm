@@ -49,7 +49,7 @@ sai_tunnel_global_sip_mask_enable=1
 load_firmware=0x2
 
 serdes_lane_config_dfe=on
-serdes_lane_config_media_type=copper
+serdes_lane_config_media_type=backplane
 
 #BC0#
 dport_map_port_1=81
@@ -1301,7 +1301,6 @@ serdes_core_tx_polarity_flip_physical{255}=0xD6
 serdes_core_tx_polarity_flip_physical{256}=0xD6
 
 #Set default medium to copper
-serdes_lane_config_media_type=copper
 #dport_map_port_38=129
 #portmap_38=257:10
 #dport_map_port_118=130

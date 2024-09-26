@@ -784,7 +784,7 @@ device:
                   [140],[142],[144],[146]]
       :
         MEDIUM_TYPE_AUTO: 0
-        MEDIUM_TYPE: PC_PHY_MEDIUM_COPPER
+        MEDIUM_TYPE: PC_PHY_MEDIUM_BACKPLANE
 ...
 ---
 device:

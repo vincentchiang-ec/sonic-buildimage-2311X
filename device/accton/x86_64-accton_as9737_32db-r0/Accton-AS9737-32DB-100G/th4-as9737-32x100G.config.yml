@@ -655,7 +655,7 @@ device:
         PORT_ID: [[1, 4], [17, 20], [34, 37], [51, 54], [204, 207], [221, 224], [238, 241], [255, 258]]
       :
         MEDIUM_TYPE_AUTO: 0
-        MEDIUM_TYPE: PC_PHY_MEDIUM_COPPER
+        MEDIUM_TYPE: PC_PHY_MEDIUM_BACKPLANE
 ...
 ---
 device:
