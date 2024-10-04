@@ -74,14 +74,14 @@ class Psu(PsuBase):
             e.g. 12.1
         """
         if self.get_status() is not True:
-            return 0
+            return 0.0
 
         vout_path = "{}{}".format(self.hwmon_path, 'psu_v_out')
         vout_val = self._api_helper.read_txt_file(vout_path)
         if vout_val is not None:
             return float(vout_val) / 1000
         else:
-            return 0
+            return 0.0
 
     def get_current(self):
         """
@@ -90,14 +90,14 @@ class Psu(PsuBase):
             A float number, the electric current in amperes, e.g 15.4
         """
         if self.get_status() is not True:
-            return 0
+            return 0.0
 
         iout_path = "{}{}".format(self.hwmon_path, 'psu_i_out')
         val = self._api_helper.read_txt_file(iout_path)
         if val is not None:
             return float(val) / 1000
         else:
-            return 0
+            return 0.0
 
     def get_power(self):
         """
@@ -106,14 +106,14 @@ class Psu(PsuBase):
             A float number, the power in watts, e.g. 302.6
         """
         if self.get_status() is not True:
-            return 0
+            return 0.0
 
         pout_path = "{}{}".format(self.hwmon_path, 'psu_p_out')
         val = self._api_helper.read_txt_file(pout_path)
         if val is not None:
             return float(val) / 1000
         else:
-            return 0
+            return 0.0
 
     def get_powergood_status(self):
         """
@@ -158,12 +158,15 @@ class Psu(PsuBase):
             A float number of current temperature in Celsius up to nearest thousandth
             of one degree Celsius, e.g. 30.125
         """
+        if self.get_status() is not True:
+            return 0.0
+
         temp_path = "{}{}".format(self.hwmon_path, 'psu_temp1_input')
         val = self._api_helper.read_txt_file(temp_path)
         if val is not None:
             return float(val) / 1000
         else:
-            return 0
+            return 0.0
 
     def get_temperature_high_threshold(self):
         """
@@ -181,12 +184,15 @@ class Psu(PsuBase):
             A float number, the high threshold output voltage in volts,
             e.g. 12.1
         """
+        if self.get_status() is not True:
+            return 0.0
+
         vout_path = "{}{}".format(self.hwmon_path, 'psu_mfr_vout_max')
         vout_val = self._api_helper.read_txt_file(vout_path)
         if vout_val is not None:
             return float(vout_val) / 1000
         else:
-            return 0
+            return 0.0
 
     def get_voltage_low_threshold(self):
         """
@@ -195,12 +201,15 @@ class Psu(PsuBase):
             A float number, the low threshold output voltage in volts,
             e.g. 12.1
         """
+        if self.get_status() is not True:
+            return 0.0
+
         vout_path = "{}{}".format(self.hwmon_path, 'psu_mfr_vout_min')
         vout_val = self._api_helper.read_txt_file(vout_path)
         if vout_val is not None:
             return float(vout_val) / 1000
         else:
-            return 0
+            return 0.0
 
     def get_name(self):
         """
@@ -221,7 +230,7 @@ class Psu(PsuBase):
         if val is not None:
             return int(val, 10) == 1
         else:
-            return 0
+            return False
 
     def get_status(self):
         """
@@ -234,7 +243,7 @@ class Psu(PsuBase):
         if val is not None:
             return int(val, 10) == 1
         else:
-            return 0
+            return False
 
     def get_model(self):
         """
